@@ -1,8 +1,9 @@
 from stats import get_num_words, get_book_text
 from stats import *
-def main():
-    arr = get_num_words(get_book_text("./books/frankenstein.txt"))
-    num_words = len(arr)
-    print (f"Found {num_words} total words")
 
+frankenstein_path = "./books/frankenstein.txt"
+frank_txt = get_book_text(frankenstein_path)
+
+def main():
+    print(character_count(str.lower(frank_txt)))
 main()
