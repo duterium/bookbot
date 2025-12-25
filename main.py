@@ -23,7 +23,7 @@ def print_pretty_report(texth) :
 #     return file.read()
 
 def main():
-    print("e: 44538\nt: 29493\ne: 119354\nt: 89875\ne: 74451\nt: 50837")
+    #print("e: 44538\nt: 29493\ne: 119354\nt: 89875\ne: 74451\nt: 50837")
     #print(sys.argv)
     if len(sys.argv) != 2 :
         print("Usage: python3 main.py <path_to_book>")
