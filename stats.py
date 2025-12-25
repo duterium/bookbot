@@ -17,3 +17,19 @@ def character_count(text):
         else :
             char_dict[c] = 1
     return char_dict
+def sort_on(items):
+    return items["num"]
+
+
+
+def char_count_sort(text) :
+    # takes input of a string, returns a list of dictionaries sorted from greatest to least containig {"char": '?' , "num" : ***}
+    char_dict = character_count(text)
+    dict_list = []
+    for chr in char_dict :
+        # print(f"{chr} : {char_dict[chr]}")
+        dict_list.append({
+            "char": chr,
+            "num": char_dict[chr]})
+    dict_list.sort(reverse=True, key=sort_on)
+    return dict_list
