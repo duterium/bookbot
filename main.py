@@ -4,13 +4,14 @@ import sys
 
 frankenstein_path = "./books/frankenstein.txt"
 frank_txt = get_book_text(frankenstein_path)
-def print_pretty_report(texth) :
+def print_pretty_report(e_path) :
+    texth = get_book_text(e_path)
     sorted = char_count_sort(texth)
     
     print(  f"============ BOOKBOT ============" "\n"
-            f"Analyzing book found at {frankenstein_path}..." "\n"
+            f"Analyzing book found at {e_path}..." "\n"
             f"----------- Word Count ----------" "\n"
-            f"Found {len(get_num_words(frank_txt))} total words" "\n"
+            f"Found {len(get_num_words(texth))} total words" "\n"
             f"--------- Character Count -------")
     sorted = char_count_sort(texth)
 
@@ -29,7 +30,7 @@ def main():
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
 
-    print_pretty_report(get_book_text(sys.argv[1]))
+    print_pretty_report(sys.argv[1])
     
     #print(frank_txt)
 main()
